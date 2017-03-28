@@ -1,0 +1,25 @@
+<LOG_GENERATOR template_name="test" template_ver="1.0" template_author="AM">
+		<PARAMETER name ="maxrate" value="20"/>
+		<PARAMETER name ="total" value="200"/>
+		<PARAMETER name ="runtime" value="0"/>
+		<SEQUENCE name="test_line_1" weight="100">
+		<STEP logid="1"/>
+		<STEP logid="2"> <INHERIT value="SRCIP" /> </step>
+		<STEP logid="3"> <INHERIT value="SRCIP" /> </step>
+		<SEQUENCE/>
+	<LOG id="1" src="1.1.1.1" facility="local7" severity="info">
+	<MESSAGE> test line {{numr}} from log id {{logid_1}}</MESSAGE>
+	<FIELD name="numr" type="INT"  value="1-3000"/>
+	<FIELD name="text" value="1"/>
+	</log>
+	<LOG id="2" src="1.1.1.1" facility="local7" severity="info">
+	<MESSAGE> test line {{numr}} from log id {{logid_1}}</MESSAGE>
+	<FIELD name="numr" type="INT"  value="1-3000"/>
+	<FIELD name="text" value="2"/>
+	</log>
+	<LOG id="3" src="1.1.1.1" facility="local7" severity="info">
+	<MESSAGE> test line {{numr}} from log id {{logid_1}}</MESSAGE>
+	<FIELD name="numr" type="INT"  value="1-3000"/>
+	<FIELD name="text" value="3"/>
+	</log>
+	</LOG_GENERATOR>
