@@ -1,0 +1,28 @@
+<LOG_GENERATOR template_name="artur_template1.gnr: Test template 2" template_ver="1.0" template_author="AM">
+        <PARAMETER name="maxrate" value="50" />
+        <PARAMETER name="total" value="40000" />
+        <PARAMETER name="runtime" value="120" />
+        <SEQUENCE name="test sequence 1" weight="30">
+                <STEP logid="1" />
+        </SEQUENCE>
+        <SEQUENCE name="test sequence 2 " weight="30">
+                <STEP logid="2" />
+        </SEQUENCE>
+        <SEQUENCE name="test sequence 3" weight="39">
+                <STEP logid="3" />
+        </SEQUENCE>
+
+<LOG id="1" src="192.168.1.1" facility="local7" severity="notice">
+
+<MESSAGE>date=2017-03-29 time=16:31:05 devname=FW-CIC-A devid=FGxxxxxxxx logid=0000000013 type=traffic subtype=forward level=notice vd=root srcip=192.168.1.2 srcport=60601 srcintf="port21" dstip=65.52.0.51 dstport=5671 dstintf="vlan111" sessionid=906169965 proto=6 action=deny policyid=0 dstcountry="United States" srccountry="Reserved" trandisp=noop duration=0 sentbyte=0 rcvdbyte=0 sentpkt=0 appcat="unscanned" crscore=30 craction=131072 crlevel=high</MESSAGE>
+</LOG>
+
+<LOG id="2" src="192.168.1.1" facility="local7" severity="notice">
+<MESSAGE>date=2017-03-29 time=16:38:19 devname=FW-fortigate devid=FGxxxxxxxx logid=0000000013 type=traffic subtype=forward level=notice vd=root srcip=192.168.1.3 srcport=50604 srcintf="ssl.root" dstip=192.168.10.10 dstport=135 dstintf="port233" sessionid=906108267 proto=6 action=close policyid=1469 dstcountry="Reserved" srccountry="Reserved" trandisp=noop duration=601 sentbyte=620 rcvdbyte=588 sentpkt=7 rcvdpkt=5 appcat="unscanned" </MESSAGE>
+</LOG>
+
+<LOG id="3" src="192.168.1.1" facility="local7" severity="notice">
+<MESSAGE>date=2017-03-29 time=16:44:23 devname=FW-foritgate devid=FGxxxxxxxxxx logid=0000000011 type=traffic subtype=forward level=warning vd=root srcip=192.168.1.4 srcport=46266 srcintf="vlan_27_danger_zone" dstip=31.13.83.2 dstport=443 dstintf="v2155_nexlog" sessionid=906212576 proto=6 action=ip-conn policyid=539 appcat="unscanned" crscore=5 craction=262144 crlevel=low</MESSAGE>
+</LOG>
+
+</LOG_GENERATOR>
